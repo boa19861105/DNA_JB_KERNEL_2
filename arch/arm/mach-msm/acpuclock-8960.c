@@ -777,13 +777,13 @@ static struct l2_level l2_freq_tbl_8064[] = {
 
 static struct acpu_level acpu_freq_tbl_8064_slow[] = {
 	{ 0, { STBY_KHZ, QSB,   0, 0, 0x00 }, L2(0),   900000 },
-#ifdef CONFIG_CPU_OVERCLOCK
+/* #ifdef CONFIG_CPU_OVERCLOCK
  	{ 1, {   192000, PLL_8, 0, 2, 0x00 }, L2(1),   900000 },
 	{ 1, {   384000, HFPLL, 0, 2, 0x20 }, L2(2),   950000 },
 #endif
-#ifndef CONFIG_CPU_OVERCLOCK
+#ifndef CONFIG_CPU_OVERCLOCK */
 	{ 1, {   384000, PLL_8, 0, 2, 0x20 }, L2(2),   950000 },
-#endif
+/* #endif */
 	{ 0, {   432000, HFPLL, 2, 0, 0x24 }, L2(8),   975000 },
 	{ 1, {   486000, HFPLL, 2, 0, 0x28 }, L2(8),   975000 },
 	{ 0, {   540000, HFPLL, 2, 0, 0x16 }, L2(8),  1000000 },
@@ -823,13 +823,13 @@ static struct acpu_level acpu_freq_tbl_8064_slow[] = {
 
 static struct acpu_level acpu_freq_tbl_8064_nom[] = {
 	{ 0, { STBY_KHZ, QSB,   0, 0, 0x00 }, L2(0),   900000 },
-#ifdef CONFIG_CPU_OVERCLOCK
+/* #ifdef CONFIG_CPU_OVERCLOCK
  	{ 1, {   192000, PLL_8, 0, 2, 0x00 }, L2(1),   900000 },
 	{ 1, {   384000, HFPLL, 0, 2, 0x20 }, L2(2),   900000 },
 #endif
-#ifndef CONFIG_CPU_OVERCLOCK
+#ifndef CONFIG_CPU_OVERCLOCK */
 	{ 1, {   384000, PLL_8, 0, 2, 0x20 }, L2(2),   900000 },
-#endif
+/* #endif */
 	{ 0, {   432000, HFPLL, 2, 0, 0x24 }, L2(8),   925000 },
 	{ 1, {   486000, HFPLL, 2, 0, 0x28 }, L2(8),   925000 },
 	{ 0, {   540000, HFPLL, 2, 0, 0x16 }, L2(8),   950000 },
@@ -869,13 +869,13 @@ static struct acpu_level acpu_freq_tbl_8064_nom[] = {
 
 static struct acpu_level acpu_freq_tbl_8064_fast[] = {
 	{ 0, { STBY_KHZ, QSB,   0, 0, 0x00 }, L2(0),   850000 },
-#ifdef CONFIG_CPU_OVERCLOCK
+/* #ifdef CONFIG_CPU_OVERCLOCK
  	{ 1, {   192000, PLL_8, 0, 2, 0x00 }, L2(1),   850000 },
 	{ 1, {   384000, HFPLL, 0, 2, 0x20 }, L2(2),   850000 },
 #endif
-#ifdef CONFIG_CPU_OVERCLOCK
+#ifdef CONFIG_CPU_OVERCLOCK */
 	{ 1, {   384000, PLL_8, 0, 2, 0x20 }, L2(2),   850000 },
-#endif
+/* #endif */
 	{ 0, {   432000, HFPLL, 2, 0, 0x24 }, L2(8),   875000 },
 	{ 1, {   486000, HFPLL, 2, 0, 0x28 }, L2(8),   875000 },
 	{ 0, {   540000, HFPLL, 2, 0, 0x16 }, L2(8),   900000 },
@@ -915,13 +915,13 @@ static struct acpu_level acpu_freq_tbl_8064_fast[] = {
 
 static struct acpu_level acpu_freq_tbl_8064_faster[] = {
 	{ 0, { STBY_KHZ, QSB,   0, 0, 0x00 }, L2(0),   825000 },
-#ifdef CONFIG_CPU_OVERCLOCK
+/* #ifdef CONFIG_CPU_OVERCLOCK
 	{ 1, {   192000, PLL_8, 0, 2, 0x00 }, L2(1),   825000 },
 	{ 1, {   384000, HFPLL, 0, 2, 0x20 }, L2(2),   850000 },
 #endif
-#ifndef CONFIG_CPU_OVERCLOCK
+#ifndef CONFIG_CPU_OVERCLOCK */
 	{ 1, {   384000, PLL_8, 0, 2, 0x20 }, L2(2),   850000 },
-#endif
+/* #endif */
 	{ 0, {   432000, HFPLL, 2, 0, 0x24 }, L2(8),   875000 },
 	{ 1, {   486000, HFPLL, 2, 0, 0x28 }, L2(8),   875000 },
 	{ 0, {   540000, HFPLL, 2, 0, 0x16 }, L2(8),   900000 },
