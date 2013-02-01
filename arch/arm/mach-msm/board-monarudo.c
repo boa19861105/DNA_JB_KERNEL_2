@@ -3161,18 +3161,18 @@ static struct platform_device msm_tsens_device = {
 static struct msm_thermal_data msm_thermal_pdata = {
 	.sensor_id = 0,
 	.poll_ms = 150,
-	.shutdown_temp = 120,
+	.shutdown_temp = 125,
 
-	.allowed_max_high = 116,
-	.allowed_max_low = 111,
+	.allowed_max_high = 124,
+	.allowed_max_low = 114,
 	.allowed_max_freq = 918000,
 
-	.allowed_mid_high = 110,
-	.allowed_mid_low = 106,
+	.allowed_mid_high = 113,
+	.allowed_mid_low = 103,
 	.allowed_mid_freq = 1458000,
 
-	.allowed_low_high = 105,
-	.allowed_low_low = 100,
+	.allowed_low_high = 102,
+	.allowed_low_low = 92,
 	.allowed_low_freq = 1512000,
 };
 
