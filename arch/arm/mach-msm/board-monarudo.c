@@ -30,7 +30,6 @@
 #include <linux/ion.h>
 #include <linux/memory.h>
 #include <linux/memblock.h>
-#include <linux/msm_thermal.h>
 #include <linux/i2c/atmel_mxt_ts.h>
 #include <linux/cyttsp.h>
 #include <linux/gpio_keys.h>
@@ -3158,24 +3157,6 @@ static struct platform_device msm_tsens_device = {
 	.id = -1,
 };
 
-static struct msm_thermal_data msm_thermal_pdata = {
-	.sensor_id = 0,
-	.poll_ms = 150,
-	.shutdown_temp = 125,
-
-	.allowed_max_high = 124,
-	.allowed_max_low = 114,
-	.allowed_max_freq = 918000,
-
-	.allowed_mid_high = 113,
-	.allowed_mid_low = 103,
-	.allowed_mid_freq = 1458000,
-
-	.allowed_low_high = 102,
-	.allowed_low_low = 92,
-	.allowed_low_freq = 1512000,
-};
-
 #define MSM_SHARED_RAM_PHYS 0x80000000
 static void __init monarudo_map_io(void)
 {
@@ -4673,8 +4654,6 @@ static void __init monarudo_common_init(void)
 {
 	int rc = 0;
 	struct kobject *properties_kobj;
-
-	msm_thermal_init(&msm_thermal_pdata);
 
 	if (socinfo_init() < 0)
 		pr_err("socinfo_init() failed!\n");
