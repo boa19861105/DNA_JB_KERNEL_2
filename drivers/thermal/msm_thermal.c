@@ -26,22 +26,22 @@
 #define DEF_TEMP_SENSOR1      1
 
 //shutdown temp
-#define DEF_SHUTDOWNTEMP 80
+#define DEF_SHUTDOWNTEMP 120
 
 //max thermal limit
-#define DEF_ALLOWED_MAX_HIGH 75
+#define DEF_ALLOWED_MAX_HIGH 115
 #define DEF_ALLOWED_MAX_FREQ 918000
 
 //mid thermal limit
-#define DEF_ALLOWED_MID_HIGH 72
+#define DEF_ALLOWED_MID_HIGH 110
 #define DEF_ALLOWED_MID_FREQ 1350000
 
 //low thermal limit
-#define DEF_ALLOWED_LOW_HIGH 70
+#define DEF_ALLOWED_LOW_HIGH 105
 #define DEF_ALLOWED_LOW_FREQ 1512000
 
 //Sampling interval
-#define DEF_THERMAL_CHECK_MS 100
+#define DEF_THERMAL_CHECK_MS 150
 
 static DEFINE_MUTEX(emergency_shutdown_mutex);
 
@@ -79,7 +79,7 @@ static struct msm_thermal_tuners {
 	.shutdown_temp = DEF_SHUTDOWNTEMP,
 
 	.allowed_max_high = DEF_ALLOWED_MAX_HIGH,
-	.allowed_max_low = (DEF_ALLOWED_MAX_HIGH - 4),
+	.allowed_max_low = (DEF_ALLOWED_MAX_HIGH - 5),
 	.allowed_max_freq = DEF_ALLOWED_MAX_FREQ,
 
 	.allowed_mid_high = DEF_ALLOWED_MID_HIGH,
@@ -87,7 +87,7 @@ static struct msm_thermal_tuners {
 	.allowed_mid_freq = DEF_ALLOWED_MID_FREQ,
 
 	.allowed_low_high = DEF_ALLOWED_LOW_HIGH,
-	.allowed_low_low = (DEF_ALLOWED_LOW_HIGH - 6),
+	.allowed_low_low = (DEF_ALLOWED_LOW_HIGH - 5),
 	.allowed_low_freq = DEF_ALLOWED_LOW_FREQ,
 
 	.check_interval_ms = DEF_THERMAL_CHECK_MS,
